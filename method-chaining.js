@@ -10,32 +10,32 @@
  *  returns => 30404000
  */
 
-// function calculateValue() {
-//   let sum =  0;
-//   return {
-//     lacks: function (value) {
-//       sum += value * 1_00_000;
-//       return this;
-//     },
-//     thousand: function (value) {
-//       sum += value * 1000;
-//       return this;
-//     },
-//     crores: function (value) {
-//       sum += value * 1_00_00_000;
-//       return this;
-//     },
-//     value: function () {
-//       console.log(sum);
-//     },
-//   };
-// }
-// calculateValue().lacks(3).crores(4).thousand(5).thousand(2).value();
-
-function a() {
-    console.log(this);
+function calculateValue() {
+  let sum =  0;
+  return {
+    lacks: function (value) {
+      sum += value * 1_00_000;
+      return this;
+    },
+    thousand: function (value) {
+      sum += value * 1000;
+      return this;
+    },
+    crores: function (value) {
+      sum += value * 1_00_00_000;
+      return this;
+    },
+    value: function () {
+      console.log(sum);
+    },
+  };
 }
-a();
+calculateValue().lacks(3).crores(4).thousand(5).thousand(2).value();
+
+
+// /////////////////////////// OR  //////////////////////////////////////////////////
+
+
 function calculateValue() {
     let sum = 0;
     console.log(this);
